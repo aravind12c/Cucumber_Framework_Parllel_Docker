@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-11-13T20:18:50Z" name="Practice Suite" finished-at="2021-11-13T20:19:13Z" duration-ms="23059">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flink.testfactory.TestRunner@55ca8de8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flink.testfactory.TestRunner@143640d5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2021-11-13T20:18:50Z" name="Test Basics 1" finished-at="2021-11-13T20:19:13Z" duration-ms="22606">
+      <class name="com.flink.testfactory.TestRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.flink.testfactory.TestRunner@55ca8de8]" started-at="2021-11-13T20:18:50Z" name="setUpClass" finished-at="2021-11-13T20:18:51Z" duration-ms="582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="driverInit(java.lang.String)[pri:0, instance:com.flink.testfactory.TestRunner@55ca8de8]" started-at="2021-11-13T20:18:51Z" name="driverInit" finished-at="2021-11-13T20:18:55Z" duration-ms="4006" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInit -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flink.testfactory.TestRunner@55ca8de8]" started-at="2021-11-13T20:18:55Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-13T20:19:12Z" duration-ms="17419" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["As a user, I want to buy two products from weathershopper"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Flink Assesment for Channels]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.flink.testfactory.TestRunner@55ca8de8]" started-at="2021-11-13T20:19:12Z" name="teardown" finished-at="2021-11-13T20:19:12Z" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flink.testfactory.TestRunner@55ca8de8]" started-at="2021-11-13T20:19:12Z" name="tearDownClass" finished-at="2021-11-13T20:19:13Z" duration-ms="506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.flink.testfactory.TestRunner -->
+    </test> <!-- Test Basics 1 -->
+    <test started-at="2021-11-13T20:18:50Z" name="Test Basics 2" finished-at="2021-11-13T20:19:13Z" duration-ms="23059">
+      <class name="com.flink.testfactory.TestRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.flink.testfactory.TestRunner@143640d5]" started-at="2021-11-13T20:18:50Z" name="setUpClass" finished-at="2021-11-13T20:18:51Z" duration-ms="582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="driverInit(java.lang.String)[pri:0, instance:com.flink.testfactory.TestRunner@143640d5]" started-at="2021-11-13T20:18:51Z" name="driverInit" finished-at="2021-11-13T20:18:58Z" duration-ms="7181" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInit -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flink.testfactory.TestRunner@143640d5]" started-at="2021-11-13T20:18:58Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-13T20:19:12Z" duration-ms="14462" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["As a user, I want to buy two products from weathershopper"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Flink Assesment for Channels]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.flink.testfactory.TestRunner@143640d5]" started-at="2021-11-13T20:19:12Z" name="teardown" finished-at="2021-11-13T20:19:13Z" duration-ms="772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flink.testfactory.TestRunner@143640d5]" started-at="2021-11-13T20:19:13Z" name="tearDownClass" finished-at="2021-11-13T20:19:13Z" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.flink.testfactory.TestRunner -->
+    </test> <!-- Test Basics 2 -->
+  </suite> <!-- Practice Suite -->
+</testng-results>
