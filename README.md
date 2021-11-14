@@ -47,9 +47,25 @@ or
 
 ## Approach 
 Below are the points considered while creating the framework
+- Project - Maven Project
 - Design pattern - Page object model
-- Framework - Cucumber(For Test approach), Selenium Driver(For UI Automation), TestNG(For Parallel Execution), Extent(For Report)
+- Framework - Cucumber(For Test approach), Selenium Driver(For UI Automation), TestNG(For Parallel Execution and Retry Failed Cases), Extent(For Report)
 - Language - Java
+Below mentioned are the information on how I built the project
+- In DriverInit package we have classes to trigger the browser and close the browser based on associated case that runs in thread so that multiple cases can be run in parllel.
+- In test/resources we have Feature file has the test cases in gherkin language(BDD) that needs to be executed and associated StepDefinition file is available in test/java which has all the relevant stepdefinitions for the cucumber feature file.
+- A testrunner file is available in test/java, which is used to trigger the cases from Feature - StepDefinition file. In TestRunner we have tags that associates which cases to be triggered.
+- In PageObject package, we have BasePage that contains all the common functions necessary for doing comman actions like click, getText, send Text...etc and PageObject contains pages that has all the Locators and Actions to be performed. Basically, Stepdefinition file will call the PageObject and PageObject's classes are extended with Base Page, So from StepDefinition we call all the relevant actions.
+- There is Utils package which contains class to get the information from Property Files.
+- In RetryCase package we have classes that supports Retry the cases on Failure.
+- Now we have TestNG folder, that has testNG.xml which will be used to trigger the runner class and helps the tests to run in Parllel.
+- In property files we have all the configuartions that needs to run the case
+- Docker-compose.yaml is available to trigger the images that required to run the scenarios 
+Below mentioned are the information on how Test case are triggered
+- If we run the Pom.xml as maven build, it has 
+
+
+
 
 
 ## Note 
