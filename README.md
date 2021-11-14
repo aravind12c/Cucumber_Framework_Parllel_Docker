@@ -52,4 +52,4 @@ Below are the points considered while creating the framework
 
 
 ## Note 
-I have added retry scenarios on failures. There is 5% chance of cases getting failed due to payment failures. If any case gets failed, that particular case will be triggered once again.
+I have added retry scenarios on failures. If by chance any case fails while execution, then it will automatically triggers the failed cases.
