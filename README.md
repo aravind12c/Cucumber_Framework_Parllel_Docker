@@ -11,7 +11,7 @@ Java, Cucumber, Selenium Webdriver, TestNG, Extent
 - Import as a Maven project in any IDE
 
 ### To run in Local
-- Use right Chromedriver and Firefox as per your chrome/firefox version (src/main/resources -> driver -> chromedriver.exe/geckodriver.exe)
+- Use right Chromedriver and Firefoxdrver as per your chrome/firefox version (src/main/resources -> driver -> chromedriver.exe/geckodriver.exe)
 
 ### To run in Docker
 - Install Docker or Docker Desktop (Refer url https://docs.docker.com/engine/install/)
