@@ -25,7 +25,7 @@ Java, Cucumber, Selenium Webdriver, TestNG, Extent
 - Page Obejcts 					: \src\main\java\com.flink.pageObjects\
 - Failure Retry					: \src\main\java\com.flink.retryCase\
 - Web Utilities 				: \src\main\java\com.flink.webUtilities\
-- Web Configs 					: \src\main\resources\driver\WebConfig
+- Web Configs 					: \src\test\resources\driver\WebConfig
 - Test Runner  					: \src\test\java\com.flink.testfactory\
 - Step Definitions 				: \src\test\java\com.flink.stepDefinitions\
 - Feature files 				: \src\test\resources\Features\
