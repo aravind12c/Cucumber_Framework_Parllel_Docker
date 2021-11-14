@@ -16,7 +16,7 @@ Java, Cucumber, Selenium Webdriver, TestNG, Extent
 ### To run in Docker
 - Install Docker or Docker Desktop (Refer url https://docs.docker.com/engine/install/)
 - Open Docker Desktop or Start the Docker Engine
-- Open Command and give cd <Project Folder>
+- Open Command and give cd "Project Folder"
 - Then enter command docker-compose up -d
     
 ## Project Setup 
