@@ -20,6 +20,7 @@ import org.testng.annotations.Parameters;
 import com.flink.webUtilities.PropertyUtils;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverInitialization extends AbstractTestNGCucumberTests {
 
@@ -55,7 +56,7 @@ public class DriverInitialization extends AbstractTestNGCucumberTests {
 				browserdriver = new RemoteWebDriver(hubUrl, options);
 				((RemoteWebDriver) browserdriver).setFileDetector(new LocalFileDetector());
 			} else {
-				System.setProperty("webdriver.chrome.driver", "./src/main/resources/driver/chromedriver.exe");
+		        WebDriverManager.chromedriver().setup();
 				browserdriver = new ChromeDriver(options);
 			}
 
@@ -73,8 +74,8 @@ public class DriverInitialization extends AbstractTestNGCucumberTests {
 				((RemoteWebDriver) browserdriver).setFileDetector(new LocalFileDetector());
 			} else {
 				options.setProfile(profile);
-				System.setProperty("webdriver.gecko.driver", "./src/main/resources/driver/geckodriver.exe");
 				options.setCapability("marionette", true);
+				WebDriverManager.firefoxdriver().setup();
 				browserdriver = new FirefoxDriver(options);
 			}
 		}
