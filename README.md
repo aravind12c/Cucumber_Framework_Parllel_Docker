@@ -64,11 +64,9 @@ Below mentioned are the information on how I built the project
 - Docker-compose.yaml is available to trigger the images that required to run the scenarios 
 
 Below mentioned are the information on how Test case are triggered
-- If we run the Pom.xml as maven build, it has 
-
-
-
-
+- If we run the Pom.xml as maven build, it has Surfire plugin which has the XML file location, that triggers the TestNG.xml file and in TestNG.xml we have the location to trigger the Runner file.
+- Now runnerfile will have the Feature and Step Def file which triggers the cases.
+- If we are using Docker, then in config.properties, we have Seleniumhub url that is associated with images, so our project will connect to the port of Docker and runnthe cases in Docker.
 
 ## Note 
 I have added retry scenarios on failures. If by chance any case fails while execution, then it will automatically triggers the failed cases. If any case got failed, it will be marked as Skipped in Console as it got retried and passed on second execution.
