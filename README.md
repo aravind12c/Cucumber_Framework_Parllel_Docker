@@ -6,6 +6,7 @@ Java, Cucumber, Selenium Webdriver, TestNG, Extent
 # Prerequisites 
 - Java 8 and above 
 - Any IDE 
+- Install Maven and set the Environment Variable
 - For Cucumber's actual flavour, install a plugin for cucumber in IDE and convert project into cucumber project
 - Download and Extract this project to your local or use git clone https://github.com/aravind12c/flinktestassesment.git
 - Import as a Maven project in any IDE
