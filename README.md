@@ -52,4 +52,4 @@ Below are the points considered while creating the framework
 
 
 ## Note 
-I have added retry scenarios on failures. If by chance any case fails while execution, then it will automatically triggers the failed cases.
+I have added retry scenarios on failures. If by chance any case fails while execution, then it will automatically triggers the failed cases. If any case got failed, it will be marked as Skipped in Console as it got retried and passed on second execution.
