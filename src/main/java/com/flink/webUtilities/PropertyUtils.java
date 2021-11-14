@@ -15,7 +15,7 @@ public class PropertyUtils {
 		FileReader reader;
 		Properties property = new Properties();
 		try {
-			reader = new FileReader("src/main/resources/WebConfig/config.properties");
+			reader = new FileReader("src/test/resources/WebConfig/config.properties");
 			property.load(reader);
 		} catch (IOException e) {
 			e.printStackTrace();
