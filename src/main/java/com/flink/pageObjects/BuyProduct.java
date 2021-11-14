@@ -8,13 +8,14 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
+import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import com.flink.webUtilities.PropertyUtils;
 
 public class BuyProduct extends BasePage {
 
 	/**
-	 * Page Objects and methods are associated based on the steps from the Feature File
+	 * Page Objects and methods are associated based on the steps from the Feature
+	 * File
 	 */
 
 	private static By currtempheader = By.xpath("//h2[contains(text(), 'Current temperature')]");
@@ -23,7 +24,8 @@ public class BuyProduct extends BasePage {
 	private static By temprature = By.xpath("//span[@id = 'temperature']");
 	private static By buymoisturizerbtn = By.xpath("//button[text() = 'Buy moisturizers']");
 	private static By buysunscreenbtn = By.xpath("//button[text() = 'Buy sunscreens']");
-	private static By almondproducts = By.xpath("//p[contains(text(),'Almond')]/parent::div/p[contains(text(),'Price')]");
+	private static By almondproducts = By
+			.xpath("//p[contains(text(),'Almond')]/parent::div/p[contains(text(),'Price')]");
 	private static By aloeproducts = By.xpath("//p[contains(text(),'Aloe')]/parent::div/p[contains(text(),'Price')]");
 	private static By spf30products = By.xpath("//p[contains(text(),'-30')]/parent::div/p[contains(text(),'Price')]");
 	private static By spf50products = By.xpath("//p[contains(text(),'-50')]/parent::div/p[contains(text(),'Price')]");
@@ -37,7 +39,7 @@ public class BuyProduct extends BasePage {
 	private static By inputexp = By.xpath("//input[@id = 'cc-exp']");
 	private static By inputcvc = By.xpath("//input[@id = 'cc-csc']");
 	private static By paybtn = By.xpath("//button[@id = 'submitButton']");
-	private static By paymentsuccess = By.xpath("//h2[contains(text(),'PAYMENT')]");
+	private static By paymentsuccess = By.xpath("//h2[contains(text(),'PAYMENT SUCCESS')]");
 	private static By paymentjustifymsg = By.xpath("//p[@class = 'text-justify']");
 	private static By iframe = By.xpath("//iframe[@class = 'stripe_checkout_app']");
 
@@ -45,6 +47,7 @@ public class BuyProduct extends BasePage {
 	private static LinkedHashMap<String, String> products = new LinkedHashMap<String, String>();
 
 	public static void presenceOfHomeScreen() {
+		ExtentCucumberAdapter.addTestStepLog("This case is running in " + getBrowserName() + " Browser");
 		Assert.assertTrue(isElementDisplayed(currtempheader), "There is some issue in Loading Home Page");
 	}
 
@@ -153,8 +156,14 @@ public class BuyProduct extends BasePage {
 	}
 
 	public static void verifyPaymentSuccessMsg() {
-		Assert.assertEquals(getTextOn(paymentsuccess), "PAYMENT SUCCESS",
-				"Payment got failed as there was chance the payment may fail");
+		try {
+			isElementDisplayed(paymentsuccess);
+		} catch (Exception e) {
+			refreshPage();
+			if (isAlertDisplayed())
+				acceptAlert();
+			verifyPaymentSuccessMsg();
+		}
 		Assert.assertEquals(PropertyUtils.configProperty("successmsg"), getTextOn(paymentjustifymsg),
 				"Payment success msg is not as expected");
 	}
