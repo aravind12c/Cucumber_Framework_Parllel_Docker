@@ -11,9 +11,6 @@ Java, Cucumber, Selenium Webdriver, TestNG, Extent
 - Download and Extract this project to your local or use git clone https://github.com/aravind12c/flinktestassesment.git
 - Import as a Maven project in any IDE
 
-### To run in Local
-- Use right Chromedriver and Firefoxdrver as per your chrome/firefox version (src/main/resources -> driver -> chromedriver.exe/geckodriver.exe)
-
 ### To run in Docker
 - Install Docker or Docker Desktop (Refer url https://docs.docker.com/engine/install/)
 - Open Docker Desktop or Start the Docker Engine
@@ -51,7 +48,7 @@ Below are the points considered while creating the framework
 - Framework - Cucumber(For Test approach), Selenium Driver(For UI Automation), TestNG(For Parallel Execution and Retry Failed Cases), Extent(For Report)
 - Language - Java
 
-Below mentioned are the information on how I built the project
+### Below mentioned are the information on how I built the project
 - In DriverInit package we have classes to trigger the browser and close the browser based on associated case that runs in thread so that multiple cases can be run in parllel.
 - In test/resources we have Feature file has the test cases in gherkin language(BDD) that needs to be executed and associated StepDefinition file is available in test/java which has all the relevant stepdefinitions for the cucumber feature file.
 - A testrunner file is available in test/java, which is used to trigger the cases from Feature - StepDefinition file. In TestRunner we have tags that associates which cases to be triggered.
@@ -62,7 +59,7 @@ Below mentioned are the information on how I built the project
 - In property files we have all the configuartions that needs to run the case
 - Docker-compose.yaml is available to trigger the images that required to run the scenarios 
 
-Below mentioned are the information on how Test case are triggered
+### Below mentioned are the information on how Test case are triggered
 - If we run the Pom.xml as maven build, it has Surfire plugin which has the XML file location, that triggers the TestNG.xml file and in TestNG.xml we have the location to trigger the Runner file.
 - Now runnerfile will have the Feature and Step Def file which triggers the cases.
 - If we are using Docker, then in config.properties, we have Seleniumhub url that is associated with images, so our project will connect to the port of Docker and runnthe cases in Docker.
